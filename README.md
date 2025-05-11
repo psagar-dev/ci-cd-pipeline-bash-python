@@ -262,6 +262,36 @@ The output (`stdout` and `stderr`) is redirected to `/var/log/ci_cd_pipeline.log
 */5 * * * * /bin/bash /var/www/ci-cd-pipeline-bash-python/ci_cd_deploy.sh >> /var/log/ci_cd_pipeline.log 2>&1
 ```
 
+### 📦 First-Time Project Setup
+
+Follow these steps on your server:
+
+```bash
+cd /var/www
+git clone https://github.com/psagar-dev/ci-cd-pipeline-bash-python.git
+cd ci-cd-pipeline-bash-python
+bash ./ci_cd_deploy.sh
+```
+📝 Initial Log Output
+![First Time](/images/first-time.png)
+
+#### 🔁 Auto Deployment Test
+To test if auto-deployment is working:
+1. Modify the `index.html` file with any text change.
+2. Wait 5 minutes — a cron job runs every 5 minutes.
+3. View the deployment log:
+
+```bash
+cat /var/log/ci_cd_pipeline.log
+```
+📄 Deployment Log
+
+![Check Log](/images/check-log.png)
+
+#### 🌐 Website View
+Once deployed, your site should be accessible.
+![WebSite View](/images/webiste-view.png)
+
 ## 📜 Project Information
 
 ### 📄 License Details
