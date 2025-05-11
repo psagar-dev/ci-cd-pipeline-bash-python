@@ -13,13 +13,8 @@ fi
 
 cd "$REPO_DIR" || { echo "❌ Failed to enter $REPO_DIR"; exit 1; }
 
-if git config --get remote.origin.url &>/dev/null; then
-    git fetch origin
-    git reset --hard "origin/$BRANCH_NAME"
-else
-    echo "Cloning repository into $REPO_DIR..."
-    git clone $REPO_URL .
-fi
+git fetch origin
+git reset --hard "origin/$BRANCH_NAME"
 
 if [ ! -f "$LAST_COMMIT" ]; then
     sudo touch "$LAST_COMMIT"
