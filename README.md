@@ -39,15 +39,15 @@ To host your CI/CD-managed application, you need a Linux server where Nginx will
 
 #### 👥 EC2 Instance Configuration
 
-| ✅ **Step** | 🛠️ **Configuration**           | 📋 **Details**                                          | ⚠️ **Notes**                                |
-|------------|----------------------------------|---------------------------------------------------------|---------------------------------------------|
-| 1⃣         | Name and Tags                   | `ci-cd-sagar-b-10`                                      | Easy identification                         |
-| 2⃣         | AMI Selection                   | Ubuntu Server 24.04 LTS (AMI ID: `ami-0e55dda80b595c5f5`)| Default user: `ubuntu`                      |
-| 3⃣         | Instance Type                  | `t2.micro`                                              | Free Tier eligible                          |
-| 4⃣         | Key Pair                        | `sagar-b10`                                             | Save `.pem` file securely                   |
-| 5⃣         | Network Settings                | Default VPC/Subnet, Public IP enabled                  | SG: `my-web-app-sagar-b-10` (SSH/HTTP open) |
-| 6⃣         | Storage                         | 8 GiB `gp3`                                             | Free Tier eligible                          |
-| 7⃣         | Launch                          | Click **Launch Instance**                              | Review configuration                        |
+🛠️ **Configuration**           | 📋 **Details**                                          | ⚠️ **Notes**                                |
+----------------------------------|---------------------------------------------------------|---------------------------------------------|
+Name and Tags                   | `ci-cd-sagar-b-10`                                      | Easy identification                         |
+AMI Selection                   | Ubuntu Server 24.04 LTS (AMI ID: `ami-0e55dda80b595c5f5`)| Default user: `ubuntu`                      |
+Instance Type                  | `t2.micro`                                              | Free Tier eligible                          |
+Key Pair                        | `sagar-b10`                                             | Save `.pem` file securely                   |
+Network Settings                | Default VPC/Subnet, Public IP enabled                  | SG: `my-web-app-sagar-b-10` (SSH/HTTP open) |
+Storage                         | 8 GiB `gp3`                                             | Free Tier eligible                          |
+Launch                          | Click **Launch Instance**                              | Review configuration                        |
 
 ![Ec2](/images/ec2.png)
 
