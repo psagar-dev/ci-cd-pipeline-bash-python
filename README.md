@@ -254,12 +254,12 @@ crontab -e
 
 Add the following line to schedule the script to run every 5 minutes:
 
-The command `/bin/bash /var/www/ci-cd-pipeline-bash-python/ci_cd_deploy.sh` runs the deployment check.
+The command `/usr/bin/bash /var/www/ci-cd-pipeline-bash-python/ci_cd_deploy.sh` runs the deployment check.
 
 The output (`stdout` and `stderr`) is redirected to `/var/log/ci_cd_pipeline.log` for logging and debugging purposes.
 
 ```
-*/5 * * * * /bin/bash /var/www/ci-cd-pipeline-bash-python/ci_cd_deploy.sh >> /var/log/ci_cd_pipeline.log 2>&1
+*/5 * * * * /usr/bin/bash /var/www/ci-cd-pipeline-bash-python/ci_cd_deploy.sh >> /var/log/ci_cd_pipeline.log 2>&1
 ```
 
 ### 📦 First-Time Project Setup
@@ -269,6 +269,7 @@ Follow these steps on your server:
 ```bash
 cd /var/www
 git clone https://github.com/psagar-dev/ci-cd-pipeline-bash-python.git
+sudo chown -R $USER:$USER /var/log/ci_cd_pipeline.log
 sudo chown -R $USER:$USER ci-cd-pipeline-bash-python
 sudo chown -R $USER:$USER html
 cd ci-cd-pipeline-bash-python
