@@ -269,6 +269,8 @@ Follow these steps on your server:
 ```bash
 cd /var/www
 git clone https://github.com/psagar-dev/ci-cd-pipeline-bash-python.git
+sudo chown -R $USER:$USER ci-cd-pipeline-bash-python
+sudo chown -R $USER:$USER html
 cd ci-cd-pipeline-bash-python
 bash ./ci_cd_deploy.sh
 ```
